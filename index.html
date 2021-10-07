@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailwindCSS Starter Pack</title>
+    <link rel="stylesheet" href="./src/css/tailwind-build.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  </head>
+  <body>
+   <div class="bg-no-repeat bg-cover bg-fixed h-screen" style="background-image: url(./img/nav_cover.jpg)">
+    <div class="h-screen bg-black bg-opacity-50">
+            <!--Header start-->
+            <header class="py-2 shadow-sm">
+              <div class="container mx-auto flex items-center justify-between  ">
+                  <div class="flex ">
+                    <i class="fas fa-mobile-alt h-6 w-6 text-primary"></i>
+                    <span class="text-white">+88856498701</span>
+      
+                    <i class="far fa-clock h-6 w-8 ml-6 text-primary"></i>
+                    <span class="text-white">Mon-Sat: 11AM - 23PM</span>
+                  </div>
+                  <div class="ml-auto">
+                    <p class="text-white"> <span class="text-primary">EN</span> /BN</p>
+                  </div>
+      
+              </div>
+            </header>
+            <!--header end-->
+      
+            <!--nav start-->
+            <nav class="py-4 shadow-sm bg-[rgb(0,0,0)] bg-opacity-60" >
+              <div class="container mx-auto flex justify-between items-center ">
+                <a href="#">
+                  <h3 class="text-white text-3xl">RESTAURANTLY</h3>
+                </a>
+                <div class="flex justify-between items-center text-white gap-x-4 ">
+                  <a href="#" class="text-primary">Home</a>
+                  <a href="#" class="hover:text-primary">About</a>
+                  <a href="#" class="hover:text-primary">Menu</a>
+                  <a href="#" class="hover:text-primary">Specials</a>
+                  <a href="#" class="hover:text-primary">Events</a>
+                  <a href="#" class="hover:text-primary">Cheif</a>
+                  <a href="#" class="hover:text-primary">Gallary</a>
+                  <a href="#" class="hover:text-primary"> 
+                    
+      
+                    <div class="px-8 flex items-center cursor-pointer relative group">
+                      
+                      <span class="capitalize  text-white">
+                          Drop Downs
+                          <i class="fas fa-caret-down h-8 w-8 text-white"></i>
+      
+                      </span>
+                      <span class="">
+                       <i class="far fa-chevron-square-down"></i>
+                      </span>
+                      <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                          <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                           
+                             <span class="ml-6 text-gray-600 ">sofa</span>
+                          </a>
+                          <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                            
+                              <span class="ml-6 text-gray-600 ">Bathroom</span>
+                           </a>
+                           <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                             
+                              <span class="ml-6 text-gray-600 ">Office</span>
+                           </a>
+                           <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                             
+                              <span class="ml-6 text-gray-600 ">Outdoor</span>
+                           </a>
+                           <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                              
+                              <span class="ml-6 text-gray-600 ">Dining</span>
+                           </a>
+                      </div>
+                  </div>
+                  </a>
+                  <a href="#" class="hover:text-primary">contact</a>
+                </div>
+                <button class="btn btn-outline btn-secondary border border-primary rounded-full w-32 py-2 bg-black text-white hover:bg-primary  transition">Book A Table</button> 
+              </div>
+      
+              
+      
+            </nav>
+      
+            <!--navbar ends-->
+      
+            <!--body start-->
+            <div class="">
+              <div class="container mx-auto py-48">
+                <div class="grid grid-cols-2">
+                    <div class="">
+                        <h2 class="text-6xl font-bold text-white">
+                          Welcome to <span class="text-primary">Restaurantly</span> <br>
+                          <h4 class="text-white text-2xl font-semibold">Delivering great food for more than 18 years!</h4>
+                        </h2>
+                          <div class="flex mt-5 gap-x-8">
+                            <button class="btn btn-outline btn-secondary border border-primary rounded-full w-48 py-2 bg-black bg-opacity-10  text-white hover:bg-primary transition">Our Menu</button> 
+                            <button class="btn btn-outline btn-secondary border border-primary rounded-full w-48 py-2 bg-black  bg-opacity-10 text-white hover:bg-primary  transition">Book A Table</button> 
+      
+                          </div>
+                    </div>
+                    <div class="flex  justify-items-right ">
+                      <i class="fas fa-play-circle h-48 w-48"></i>
+                    </div>
+                </div>
+      
+              </div>
+            </div>
+
+    </div>
+    
+
+
+  </div>
+
+      <!--indoor section start-->
+
+      <div  class="bg-no-repeat bg-cover bg-fixed w-100 h-100 bg-black bg-opacity-50 " style="background-image: url(./img/indoorbg.jpg);">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-2 pb-32 pt-16">
+              <div class="">
+                <h1 class="text-white font-bold text-3xl mt-5">Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h1>
+                <p class="text-white mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <div class="flex items-center justify-items-center gap-x-4 mt-5">
+                    <i class="far fa-check-circle text-primary text-2xl"></i>
+                    <p class="text-white">Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                  </div>
+
+                  <div class="flex items-center justify-items-center gap-x-4 mt-5">
+                    <i class="far fa-check-circle text-primary text-2xl"></i>
+                    <p class="text-white">Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    
+                  </div>
+
+                  <div class="flex items-center justify-items-center gap-x-4 mt-5">
+                    <i class="far fa-check-circle text-primary text-2xl"></i>
+                    <p class="text-white">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</p>
+                    
+                  </div>
+                <p class="text-white mt-5 mb-5">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="mt-5 border border-gray-500 w-10 ml-4">
+                <img src="./img/indoor.jpg" alt="indoor image" class="w-[30px]">
+              </div>
+         
+          </div>
+
+        </div>
+      </div>
+
+      <!--card section start-->
+      <div class="py-16 bg-[#1a1814]">
+        <div class="container mx-auto">
+          <div class="flex">
+            <h5 class="text-white text-sm font-popins devide devide-x-primary">WHY US</h5>
+            <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+          </div>
+          <h3 class="font-sans font-bold text-primary text-4xl">Why Choose Our Restaurant</h3>
+          <!--grid section 1-->
+          <div class="grid grid-cols-3 gap-x-8 shadow-sm mt-7">
+
+            <!--single grid 1-->
+              <div class="group items-start bg-[#292723] p-8 hover:bg-primary ">
+                <div class="group-hover:transform group-hover:-translate-y-6 transition  duration-700 ease-in-out delay-100"> 
+                  <p class="text-primary text-2xl font-sans font-bold group-hover:text-white">01</p>
+
+                  <h3 class="font-sans font-bold text-white text-2xl pb-3">
+                    Lorem Ipsum
+                  </h3>
+  
+                  <p class="text-sm text-gray-400 font-popins group-hover:text-white">Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+  
+                </div>
+
+              </div>
+               <!--single grid 2-->
+
+               <div class="group items-start bg-[#292723] p-8 hover:bg-primary ">
+                <div class="group-hover:transform group-hover:-translate-y-6 transition  duration-700 ease-in-out delay-100"> 
+                  <p class="text-primary text-2xl font-sans font-bold group-hover:text-white">02</p>
+
+                  <h3 class="font-sans font-bold text-white text-2xl pb-3">
+                    Repellat Nihil
+                  </h3>
+  
+                  <p class="text-sm text-gray-400 font-popins group-hover:text-white">Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+  
+                </div>
+
+              </div>
+
+               <!--single grid 3-->
+
+               <div class="group items-start bg-[#292723] p-8 hover:bg-primary ">
+                <div class="group-hover:transform group-hover:-translate-y-6 transition  duration-700 ease-in-out delay-100"> 
+                  <p class="text-primary text-2xl font-sans font-bold group-hover:text-white">03</p>
+
+                  <h3 class="font-sans font-bold text-white text-2xl pb-3">
+                    Ad ad velit qui
+                  </h3>
+  
+                  <p class="text-sm text-gray-400 font-popins group-hover:text-white">Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+  
+                </div>
+
+              </div>
+          </div>
+
+            
+
+
+
+        
+         
+
+        </div>
+        
+      </div>
+
+      <!--menu section start-->
+      <div class="py-24 bg-[#292723]">
+        <div class="container mx-auto">
+            <div class="flex">
+              <h5 class="text-white text-sm font-popins devide devide-x-primary">MENU</h5>
+              <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+            </div>
+            <h3 class="font-sans font-bold text-primary text-4xl mb-8">Check Our Testy Menu</h3>
+            <div class="flex items-start justify-center gap-x-8 font-popins pb-4">
+              <a href="#" class="text-primary">All</a>
+              <a href="#" class="text-white hover:text-primary duration-300">Starter</a>
+              <a href="#" class="text-white hover:text-primary duration-300">Salads</a>
+              <a href="#" class="text-white hover:text-primary duration-300">Specially</a>
+
+            </div>
+            <div class="grid grid-cols-2 mt-9 gap-x-6">
+                <!--grid 1-->
+                <div>
+                    <div class="flex">
+                      <img src="./img/menu1.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                      <p> <span class="text-white hover:text-primary ml-2"> Lobster Bisque</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$5.95</span> <br>
+                        <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                      </p>                                          
+                    </div>
+                              
+                </div>
+                <!--grid 2-->
+                <div>
+                  <div class="flex">
+                    <img src="./img/menu2.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                    <p> <span class="text-white hover:text-primary ml-2"> Bread Barrel</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$6.95</span> <br>
+                      <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                    </p>                                          
+                  </div>
+                            
+                 </div>                    
+            </div>
+
+            <!--grid part 2-->
+
+            <div class="grid grid-cols-2 mt-9 gap-x-6">
+              <!--grid 1-->
+              <div>
+                  <div class="flex">
+                    <img src="./img/menu3.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                    <p> <span class="text-white hover:text-primary ml-2"> Crab Cake</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$57.95</span> <br>
+                      <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                    </p>                                          
+                  </div>
+                            
+              </div>
+              <!--grid 2-->
+              <div>
+                <div class="flex">
+                  <img src="./img/menu4.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                  <p> <span class="text-white hover:text-primary ml-2"> Caesar Selections</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$8.95</span> <br>
+                    <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                  </p>                                          
+                </div>
+                          
+               </div>                    
+          </div>
+
+
+           <!--grid part 3-->
+
+           <div class="grid grid-cols-2 mt-9 gap-x-6">
+            <!--grid 1-->
+            <div>
+                <div class="flex">
+                  <img src="./img/menu5.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                  <p> <span class="text-white hover:text-primary ml-2"> Tuscan Grilled</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$9.95</span> <br>
+                    <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                  </p>                                          
+                </div>
+                          
+            </div>
+            <!--grid 2-->
+            <div>
+              <div class="flex">
+                <img src="./img/menu6.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                <p> <span class="text-white hover:text-primary ml-2">Mozzarella Stick</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$4.95</span> <br>
+                  <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                </p>                                          
+              </div>
+                        
+             </div>                    
+        </div>
+
+        <!--grid part 4-->
+
+        <div class="grid grid-cols-2 mt-9 gap-x-6">
+          <!--grid 1-->
+          <div>
+              <div class="flex">
+                <img src="./img/menu7.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                <p> <span class="text-white hover:text-primary ml-2">Greek Salad</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$6.95</span> <br>
+                  <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                </p>                                          
+              </div>
+                        
+          </div>
+          <!--grid 2-->
+          <div>
+            <div class="flex">
+              <img src="./img/menu8.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+              <p> <span class="text-white hover:text-primary ml-2"> Spinach Salad</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$9.95</span> <br>
+                <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+              </p>                                          
+            </div>
+                      
+           </div>                    
+      </div>
+
+
+          <!--grid part 5-->
+
+          <div class="grid grid-cols-2 mt-9 gap-x-6">
+            <!--grid 1-->
+            <div>
+                <div class="flex">
+                  <img src="./img/menu9.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
+                  <p> <span class="text-white hover:text-primary ml-2"> Lobster Roll</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$12.95</span> <br>
+                    <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
+                  </p>                                          
+                </div>
+                          
+            </div>                         
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--SPECIAL SECTION-->
+
+      <div class="py-24 bg-[#1a1814]">
+        <div class="container mx-auto">
+          <div class="flex">
+            <h5 class="text-white text-sm font-popins devide devide-x-primary">SPECIALS</h5>
+            <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+          </div>
+          <h3 class="font-sans font-bold text-primary text-4xl mb-8">Check Our Testy Specials</h3>
+
+          <!--grid section-->
+
+          <div class="grid grid-cols-3 ">
+            
+            <div >
+              <div class="flex">
+                <div>
+                  <ul>
+                    <li class="py-3 pr-52 pl-2 bg-primary text-left font-semibold cursor-pointer">
+                     Modi sit Est
+                    </li>
+                    <li class="py-3 pr-52 pl-2 text-white font-semibold cursor-pointer hover:text-primary duration-300">
+                      Modi sit Est
+                    </li>
+                    <li class="py-3 pr-24 pl-2 text-white font-semibold cursor-pointer hover:text-primary duration-300">
+                      Modi sit Est
+                    </li>
+                    <li class="py-3 pr-24 pl-2 text-white font-semibold cursor-pointer hover:text-primary duration-300">
+                      Modi sit Est
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex justify-items-end items-end h-full w-12 bg-primary cursor-pointer hover:text-primary duration-300">
+                  
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-white text-3xl font-semibold pb-4">
+                Architecto ut aperiam autem id
+              </h2>
+              <p class="text-gray-400 text-sm font-serif pb-4">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+              <p class="text-gray-400 text-sm font-serif pb-4">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+            </div>
+            <div class="ml-3">
+              <img src="./img/specials-1.png" class="w-52 h-52 rounded-full" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--event section-->
+      <div class="bg-no-repeat bg-cover bg-fixed h-screen" style="background-image: url('./img/events-bg.jpg');">
+        <div class="h-screen bg-black bg-opacity-50">
+         <div class="container mx-auto  pt-16">
+          <div class="flex">
+            <h5 class="text-white text-sm font-popins devide devide-x-primary uppercase">Events</h5>
+            <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+          </div>
+          <h3 class="font-sans font-bold text-primary text-4xl mb-8">Organize Your Events in our Restaurant</h3>
+          <div class="grid grid-cols-1">
+            
+        <button class="btn btn-secondary">secondary</button> 
+          </div>
+         </div>
+
+        </div>
+
+      </div>
+      
+
+
+      
+
+      <!-- <header>
+        <div class="container py-16">
+          <div class="flex justify-between items-center">
+            <div class="flex">
+              <i class="fas fa-mobile-alt h-8 w-8 text-primary"></i>
+              <span class="text-white">+88856498701</span>
+            </div>
+
+          </div>
+        </div>
+        
+      </header> -->
+
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
