@@ -14,11 +14,12 @@ module.exports = {
         popins:"'Poppins', sans-serif",
     },
   },
+},
   variants: {
     extend: {},
   },
   plugins: [
-    require('daisyui'),
-  ],
-}
+		require('daisyui'),
+	],
+
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TailwindCSS Starter Pack</title>
-    <link rel="stylesheet" href="./src/css/tailwind-build.css" />
+    <title>Restaurantly</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -13,18 +13,24 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
+  
    <div class="bg-no-repeat bg-cover bg-fixed h-screen" style="background-image: url(./img/nav_cover.jpg)">
     <div class="h-screen bg-black bg-opacity-50">
+
             <!--Header start-->
             <header class="py-2 shadow-sm">
-              <div class="container mx-auto flex items-center justify-between  ">
+              <div class="container mx-auto flex flex-wrap items-center justify-between px-3 md:px-0">
                   <div class="flex ">
-                    <i class="fas fa-mobile-alt h-6 w-6 text-primary"></i>
+                    <i class="fas fa-mobile-alt h-3 w-3 md:h-6 md:w-6 text-primary"></i>
                     <span class="text-white">+88856498701</span>
       
-                    <i class="far fa-clock h-6 w-8 ml-6 text-primary"></i>
+                    <i class="far fa-clock h-3 w-3 md:h-6 md:w-6 mr-2 md:mr-0 ml-1 md:ml-6 text-primary"></i>
                     <span class="text-white">Mon-Sat: 11AM - 23PM</span>
                   </div>
                   <div class="ml-auto">
@@ -36,12 +42,12 @@
             <!--header end-->
       
             <!--nav start-->
-            <nav class="py-4 shadow-sm bg-[rgb(0,0,0)] bg-opacity-60" >
-              <div class="container mx-auto flex justify-between items-center ">
+            <nav class="py-4 shadow-sm bg-[rgb(0,0,0)] bg-opacity-60 " >
+              <div class="container mx-auto hidden md:flex flex-wrap justify-between items-center p-10 sm:p-0">
                 <a href="#">
                   <h3 class="text-white text-3xl">RESTAURANTLY</h3>
                 </a>
-                <div class="flex justify-between items-center text-white gap-x-4 ">
+                <div class="flex flex-wrap justify-between items-center text-white gap-x-4 ">
                   <a href="#" class="text-primary">Home</a>
                   <a href="#" class="hover:text-primary">About</a>
                   <a href="#" class="hover:text-primary">Menu</a>
@@ -49,7 +55,7 @@
                   <a href="#" class="hover:text-primary">Events</a>
                   <a href="#" class="hover:text-primary">Cheif</a>
                   <a href="#" class="hover:text-primary">Gallary</a>
-                  <a href="#" class="hover:text-primary"> 
+                  <a href="#" class="hover:text-primary mt-4"> 
                     
       
                     <div class="px-8 flex items-center cursor-pointer relative group">
@@ -88,33 +94,111 @@
                   </a>
                   <a href="#" class="hover:text-primary">contact</a>
                 </div>
-                <button class="btn btn-outline btn-secondary border border-primary rounded-full w-32 py-2 bg-black text-white hover:bg-primary  transition">Book A Table</button> 
+                <button class="border border-primary rounded-full w-48 py-2 bg-black text-white hover:bg-primary  transition sm:mt-6 md:mt-0">Book A Table</button> 
               </div>
       
               
       
             </nav>
+
+            <!--phone nav bar-->
+        <nav class="py-4 md:hidden shadow-sm bg-[rgb(0,0,0)] bg-opacity-60 relative " >
+          <div class="md:hidden container mx-auto flex items-center justify-between text-white">
+                <a href="#" class="ml-3">
+                  <h3 class="text-white text-xl">RESTAURANTLY</h3>
+                </a>
+              <div class="md:hidden flex items-center cursor-pointer  group mr-5">
+                <span class="text-white  px-4 py-2 mr-3 bg-primary">
+                  <i class="fas fa-bars"></i>
+                </span>
+                <div>
+                  <ul class="absolute left-0 right-0 px-2 bg-white text-black shadow-md py-1">
+                  <li><a href="#" class="text-primary ml-3">Home</a></li>
+                  <li> <a href="#" class="hover:text-primary ml-3">About</a></li>
+                  <li> <a href="#" class="hover:text-primary ml-3">Menu</a></li>
+                  <li> <a href="#" class="hover:text-primary ml-3">Specials</a></li>
+                  <li> <a href="#" class="hover:text-primary ml-3">Events</a></li>
+                  <li> <a href="#" class="hover:text-primary ml-3">Cheif</a></li>
+                  <li> <a href="#" class="hover:text-primary ml-3">Gallary</a></li>
+                  <li><a href="#" class="hover:text-primary mt-4 ml-3"> 
+                    
+      
+                    
+                  </a></li>
+                </ul>
+    
+                </div>
+              
+
+                
+                </div>
+              </div>
+            <div class="flex items-center mt-5">
+              <div class="px-8 flex items-center cursor-pointer relative group">
+                      
+                <!-- <span class="capitalize  text-black mr-auto ml-0">
+                    Drop Downs
+                    <i class="fas fa-caret-down h-8 w-8 text-white"></i>
+
+                </span> -->
+                <p class="text-white">DropDowns</p> <span> <i class="fas fa-caret-down h-8 w-8 text-white mt-5 ml-3"></i></span>
+                <!-- <span class="">
+                 <i class="far fa-chevron-square-down"></i>
+                </span> -->
+                <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-200 opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                     
+                       <span class="ml-6 text-gray-600 ">sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                      
+                        <span class="ml-6 text-gray-600 ">Bathroom</span>
+                     </a>
+                     <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                       
+                        <span class="ml-6 text-gray-600 ">Office</span>
+                     </a>
+                     <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                       
+                        <span class="ml-6 text-gray-600 ">Outdoor</span>
+                     </a>
+                     <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition ">
+                        
+                        <span class="ml-6 text-gray-600 ">Dining</span>
+                     </a>
+                </div>
+            </div>
+            <div class="w-2/3 overflow-hidden flex items-center">
+
+              <button class="border border-primary rounded-full w-32 ml-16 mr-3 bg-black text-white hover:bg-primary  transition px-1 py-2">Book A Table</button> 
+            </div>
+          </div>
+
+            </nav>
+          
+            
       
             <!--navbar ends-->
       
             <!--body start-->
             <div class="">
-              <div class="container mx-auto py-48">
-                <div class="grid grid-cols-2">
+              <div class="container mx-auto py-48 overflow-hidden">
+                <div class="md:grid grid-cols-2 md:p-20 sm:pl-10">
                     <div class="">
-                        <h2 class="text-6xl font-bold text-white">
+                        <h2 class="text-2xl md:text-8xl font-bold text-white  ml-10 md:ml-0">
                           Welcome to <span class="text-primary">Restaurantly</span> <br>
-                          <h4 class="text-white text-2xl font-semibold">Delivering great food for more than 18 years!</h4>
+                          <h4 class="text-white text-2xl font-semibold  ml-10 md:ml-0">Delivering great food for more than 18 years!</h4>
                         </h2>
-                          <div class="flex mt-5 gap-x-8">
-                            <button class="btn btn-outline btn-secondary border border-primary rounded-full w-48 py-2 bg-black bg-opacity-10  text-white hover:bg-primary transition">Our Menu</button> 
-                            <button class="btn btn-outline btn-secondary border border-primary rounded-full w-48 py-2 bg-black  bg-opacity-10 text-white hover:bg-primary  transition">Book A Table</button> 
+                          <div class="md:flex mt-5 gap-x-8 gap-y-5 md:gap-y-0">
+                            <button class="border border-primary rounded-full w-48 py-2 bg-black bg-opacity-10  text-white hover:bg-primary transition ml-20 mb-5 md:ml-0">Our Menu</button> 
+                            <button class="border border-primary rounded-full w-48 py-2 bg-black  bg-opacity-10 text-white hover:bg-primary  transition ml-20 mb-5 md:ml-0">Book A Table</button> 
       
                           </div>
                     </div>
-                    <div class="flex  justify-items-right ">
-                      <i class="fas fa-play-circle h-48 w-48"></i>
+                    <div class="flex  justify-items-center items-center relative p-10 ml-28 md:ml-0 sm:mt-10 md:mt-0">
+                      <i class="fas fa-play-circle text-3xl md:text-5xl animate-ping absolute   rounded-full bg-primary opacity-75 cursor-pointer hover:text-white"></i>
                     </div>
+                   
                 </div>
       
               </div>
@@ -128,10 +212,11 @@
 
       <!--indoor section start-->
 
-      <div  class="bg-no-repeat bg-cover bg-fixed w-100 h-100 bg-black bg-opacity-50 " style="background-image: url(./img/indoorbg.jpg);">
+      <div  class="bg-no-repeat bg-cover bg-fixed  bg-black bg-opacity-50 " style="background-image: url(./img/indoorbg.jpg);">
+        <div class="h-screen bg-black bg-opacity-50">
         <div class="container mx-auto">
-          <div class="grid grid-cols-2 pb-32 pt-16">
-              <div class="">
+          <div class="sm:grid grid-cols-2 pt-16 gap-x-8 ">
+              <div class="p-3">
                 <h1 class="text-white font-bold text-3xl mt-5">Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h1>
                 <p class="text-white mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <div class="flex items-center justify-items-center gap-x-4 mt-5">
@@ -151,27 +236,31 @@
                     <p class="text-white">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</p>
                     
                   </div>
-                <p class="text-white mt-5 mb-5">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p class="text-white mt-5">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
               </div>
-              <div class="mt-5 border border-gray-500 w-10 ml-4">
-                <img src="./img/indoor.jpg" alt="indoor image" class="w-[30px]">
-              </div>
+              <!-- <div> -->
+                <div class=" flex justify-center">
+                  <img src="./img/indoor.jpg" alt="indoor image" class="w-[80%]  border-4 border-gray-500 hover:transform hover:scale-110 transition duration-600 ease-in-out delay-200">
+                </div>
+
+              <!-- </div> -->
          
           </div>
 
         </div>
+        </div>
       </div>
 
       <!--card section start-->
-      <div class="py-16 bg-[#1a1814]">
+      <div class="py-20 pt-52 md:pt-20 bg-[#1a1814]">
         <div class="container mx-auto">
-          <div class="flex">
-            <h5 class="text-white text-sm font-popins devide devide-x-primary">WHY US</h5>
+          <div class="flex ml-5 md:ml-0">
+            <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary">WHY US</h5>
             <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
           </div>
-          <h3 class="font-sans font-bold text-primary text-4xl">Why Choose Our Restaurant</h3>
+          <h3 class="font-sans ml-5 md:ml-0 font-bold text-primary text-4xl">Why Choose Our Restaurant</h3>
           <!--grid section 1-->
-          <div class="grid grid-cols-3 gap-x-8 shadow-sm mt-7">
+          <div class="md:grid grid-cols-3 gap-x-8 shadow-sm mt-7">
 
             <!--single grid 1-->
               <div class="group items-start bg-[#292723] p-8 hover:bg-primary ">
@@ -189,7 +278,7 @@
               </div>
                <!--single grid 2-->
 
-               <div class="group items-start bg-[#292723] p-8 hover:bg-primary ">
+               <div class="group items-start bg-[#292723] p-8 hover:bg-primary mt-5 md:mt-0">
                 <div class="group-hover:transform group-hover:-translate-y-6 transition  duration-700 ease-in-out delay-100"> 
                   <p class="text-primary text-2xl font-sans font-bold group-hover:text-white">02</p>
 
@@ -205,7 +294,7 @@
 
                <!--single grid 3-->
 
-               <div class="group items-start bg-[#292723] p-8 hover:bg-primary ">
+               <div class="group items-start bg-[#292723] p-8 hover:bg-primary mt-5 md:mt-0">
                 <div class="group-hover:transform group-hover:-translate-y-6 transition  duration-700 ease-in-out delay-100"> 
                   <p class="text-primary text-2xl font-sans font-bold group-hover:text-white">03</p>
 
@@ -234,11 +323,11 @@
       <!--menu section start-->
       <div class="py-24 bg-[#292723]">
         <div class="container mx-auto">
-            <div class="flex">
-              <h5 class="text-white text-sm font-popins devide devide-x-primary">MENU</h5>
-              <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+            <div class="flex ml-5 md:ml-0">
+              <h5 class="text-gray-400  text-sm font-popins ">MENU</h5>
+              <hr class="w-40 text-primary  mt-2 ml-2 opacity-40 ">
             </div>
-            <h3 class="font-sans font-bold text-primary text-4xl mb-8">Check Our Testy Menu</h3>
+            <h3 class="font-sans ml-5 md:ml-0 font-bold text-primary text-4xl mb-8">Check Our Testy Menu</h3>
             <div class="flex items-start justify-center gap-x-8 font-popins pb-4">
               <a href="#" class="text-primary">All</a>
               <a href="#" class="text-white hover:text-primary duration-300">Starter</a>
@@ -246,119 +335,204 @@
               <a href="#" class="text-white hover:text-primary duration-300">Specially</a>
 
             </div>
-            <div class="grid grid-cols-2 mt-9 gap-x-6">
+            <div class="md:grid grid-cols-2 mt-9 gap-x-6  px-5 md:px-0">
                 <!--grid 1-->
                 <div>
-                    <div class="flex">
-                      <img src="./img/menu1.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                      <p> <span class="text-white hover:text-primary ml-2"> Lobster Bisque</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$5.95</span> <br>
-                        <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                      </p>                                          
-                    </div>
-                              
-                </div>
+                    <div class="flex gap-x-3">
+                      <div>
+                        <img src="./img/menu1.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
+                      </div>
+                  
+        
+                      <div class="flex">
+                        <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                        <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                        <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+                      </div>
+                   
+                                                                                  
+                    </div>  
+                    <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                               
+              </div>
                 <!--grid 2-->
-                <div>
-                  <div class="flex">
-                    <img src="./img/menu2.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                    <p> <span class="text-white hover:text-primary ml-2"> Bread Barrel</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$6.95</span> <br>
-                      <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                    </p>                                          
-                  </div>
-                            
-                 </div>                    
-            </div>
+                <div class="mt-8">
+                  <div class="flex gap-x-3">
+                    <div>
+
+                      <img src="./img/menu2.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
+                    </div>
+           
+                    <div class="flex">
+                      <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                      <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                      <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+                    </div>
+                 
+                                                                                
+                  </div>  
+                  <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                             
+            </div>                   
+          </div>
 
             <!--grid part 2-->
 
-            <div class="grid grid-cols-2 mt-9 gap-x-6">
+            <div class="md:grid grid-cols-2 mt-9 gap-x-6  px-5 md:px-0">
               <!--grid 1-->
-              <div>
-                  <div class="flex">
-                    <img src="./img/menu3.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                    <p> <span class="text-white hover:text-primary ml-2"> Crab Cake</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$57.95</span> <br>
-                      <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                    </p>                                          
+              <div >
+                <div class="flex gap-x-3">
+                  <div>
+
+                    <img src="./img/menu3.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
                   </div>
-                            
-              </div>
-              <!--grid 2-->
-              <div>
-                <div class="flex">
-                  <img src="./img/menu4.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                  <p> <span class="text-white hover:text-primary ml-2"> Caesar Selections</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$8.95</span> <br>
-                    <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                  </p>                                          
+
+                  <div class="flex">
+                    <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                    <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                    <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+                  </div>
+               
+                                                                              
+                </div>  
+                <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                           
+          </div>
+            <!--grid 2-->
+            <div class="mt-8">
+              <div class="flex gap-x-3">
+                <div>
+
+                  <img src="./img/menu4.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
                 </div>
-                          
-               </div>                    
+
+                <div class="flex">
+                  <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                  <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                  <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+                </div>
+             
+                                                                            
+              </div>  
+              <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                         
+        </div>                       
           </div>
 
 
            <!--grid part 3-->
 
-           <div class="grid grid-cols-2 mt-9 gap-x-6">
+           <div class="md:grid grid-cols-2 mt-9 gap-x-6  px-5 md:px-0">
             <!--grid 1-->
             <div>
-                <div class="flex">
-                  <img src="./img/menu5.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                  <p> <span class="text-white hover:text-primary ml-2"> Tuscan Grilled</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$9.95</span> <br>
-                    <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                  </p>                                          
+              <div class="flex gap-x-3">
+                <div>
+
+                  <img src="./img/menu5.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
                 </div>
-                          
-            </div>
-            <!--grid 2-->
-            <div>
-              <div class="flex">
-                <img src="./img/menu6.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                <p> <span class="text-white hover:text-primary ml-2">Mozzarella Stick</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$4.95</span> <br>
-                  <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                </p>                                          
-              </div>
-                        
-             </div>                    
+            
+  
+                <div class="flex">
+                  <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                  <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                  <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+                </div>
+             
+                                                                            
+              </div>  
+              <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                         
         </div>
+          <!--grid 2-->
+          <div class="mt-8">
+            <div class="flex gap-x-3">
+              <div>
+
+                <img src="./img/menu6.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
+              </div>
+              <div class="flex">
+                <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+              </div>
+           
+                                                                          
+            </div>  
+            <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                       
+      </div>                       
+    </div>
 
         <!--grid part 4-->
 
-        <div class="grid grid-cols-2 mt-9 gap-x-6">
+        <div class="md:grid grid-cols-2 mt-9 gap-x-6 px-5 md:px-0">
           <!--grid 1-->
           <div>
-              <div class="flex">
-                <img src="./img/menu7.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                <p> <span class="text-white hover:text-primary ml-2">Greek Salad</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$6.95</span> <br>
-                  <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                </p>                                          
+            <div class="flex gap-x-3">
+              <div>
+
+                <img src="./img/menu7.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
               </div>
-                        
-          </div>
-          <!--grid 2-->
-          <div>
-            <div class="flex">
-              <img src="./img/menu8.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-              <p> <span class="text-white hover:text-primary ml-2"> Spinach Salad</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$9.95</span> <br>
-                <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-              </p>                                          
+          
+          
+              
+              <div class="flex">
+                <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+              </div>
+           
+                                                                          
+            </div>  
+            <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                       
+      </div>
+        <!--grid 2-->
+        <div class="mt-8">
+          <div class="flex gap-x-3">
+            <div>
+
+              <img src="./img/menu8.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
             </div>
-                      
-           </div>                    
+        
+            <div class="flex">
+              <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+              <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+              <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+            </div>
+         
+                                                                        
+          </div>  
+          <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                     
+    </div>                      
       </div>
 
 
           <!--grid part 5-->
 
-          <div class="grid grid-cols-2 mt-9 gap-x-6">
+          <div class="md:grid grid-cols-2 mt-9 gap-x-6  px-5 md:px-0">
             <!--grid 1-->
             <div>
-                <div class="flex">
-                  <img src="./img/menu9.jpg" class="rounded-full h-20 w-20 border-2 border-gray-600" alt="">
-                  <p> <span class="text-white hover:text-primary ml-2"> Lobster Roll</span> <span class="text-gray-400 ml-2"> --------------------------------------</span> <span class="text-primary font-bold ml-2">$12.95</span> <br>
-                    <small class="text-gray-500 font-serif font-semibold ml-2">Lorem, deren, trataro, filede, nerada</small>
-                  </p>                                          
+              <div class="flex gap-x-3">
+                <div>
+  
+                  <img src="./img/menu9.jpg" class="rounded-full h-10 w-10 md:h-20 md:w-20 border-2 border-gray-600"  alt="">
                 </div>
-                          
-            </div>                         
+            
+            
+                
+                <div class="flex">
+                  <p class="text-white hover:text-primary ml-2 text-sm md:text-xl font-sans mr-3">Lobster Bisque</p>
+                  <span class="w-24 md:w-52  text-primary  mt-4 ml-auto opacity-40 border-t  border-dashed"></span> 
+                  <span class="text-primary font-bold ml-2 text-xl">$5.95 </span>
+                </div>
+             
+                                                                            
+              </div>  
+              <p class="text-sm  ml-14 md:ml-24 md:-mt-10 text-gray-500 font-serif font-semibold">Lorem, deren, trataro</p>
+                                                         
+        </div>                        
           </div>
 
         </div>
@@ -369,19 +543,19 @@
 
       <div class="py-24 bg-[#1a1814]">
         <div class="container mx-auto">
-          <div class="flex">
-            <h5 class="text-white text-sm font-popins devide devide-x-primary">SPECIALS</h5>
+          <div class="flex gap-x-3  ml-5 md:ml-0">
+            <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary">SPECIALS</h5>
             <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
           </div>
-          <h3 class="font-sans font-bold text-primary text-4xl mb-8">Check Our Testy Specials</h3>
+          <h3 class="font-sans ml-5 md:ml-0 font-bold text-primary text-4xl mb-8">Check Our Testy Specials</h3>
 
           <!--grid section-->
 
-          <div class="grid grid-cols-3 ">
+          <div class="md:grid grid-cols-3 ">
             
             <div >
               <div class="flex">
-                <div>
+                <div class="ml-10 md:ml-0">
                   <ul>
                     <li class="py-3 pr-52 pl-2 bg-primary text-left font-semibold cursor-pointer">
                      Modi sit Est
@@ -404,13 +578,13 @@
             </div>
 
             <div>
-              <h2 class="text-white text-3xl font-semibold pb-4">
+              <h2 class="text-white text-3xl font-semibold pb-4  ml-5 md:ml-0">
                 Architecto ut aperiam autem id
               </h2>
-              <p class="text-gray-400 text-sm font-serif pb-4">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-              <p class="text-gray-400 text-sm font-serif pb-4">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+              <p class="text-gray-400 text-sm font-serif pb-4  ml-3 md:ml-0">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+              <p class="text-gray-400 text-sm font-serif pb-4  ml-3 md:ml-0">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
             </div>
-            <div class="ml-3">
+            <div class="ml-16 md:ml-3">
               <img src="./img/specials-1.png" class="w-52 h-52 rounded-full" alt="">
             </div>
           </div>
@@ -422,21 +596,813 @@
       <!--event section-->
       <div class="bg-no-repeat bg-cover bg-fixed h-screen" style="background-image: url('./img/events-bg.jpg');">
         <div class="h-screen bg-black bg-opacity-50">
-         <div class="container mx-auto  pt-16">
+         <div class="md:container mx-auto  pt-16">
           <div class="flex">
-            <h5 class="text-white text-sm font-popins devide devide-x-primary uppercase">Events</h5>
+            <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary uppercase">Events</h5>
             <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
           </div>
           <h3 class="font-sans font-bold text-primary text-4xl mb-8">Organize Your Events in our Restaurant</h3>
-          <div class="grid grid-cols-1">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+      <style>
+        .carousel-open:checked+.carousel-item {
+          position: static;
+          opacity: 100;
+        }
+      
+        .carousel-item {
+          -webkit-transition: opacity 0.6s ease-out;
+          transition: opacity 0.6s ease-out;
+        }
+      
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
+          display: block;
+        }
+      
+        .carousel-indicators {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          bottom: 2%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          z-index: 10;
+        }
+      
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+          color: peru;
+          /*Set to match the Tailwind colour you want the active one to be */
+        }
+      </style>
+      
+      <div class="carousel relative rounded overflow-hidden shadow-xl">
+       
+          <div class="carousel-inner relative overflow-hidden w-full">
+            <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+              checked="checked">
+              <div class="carousel-item absolute opacity-0 bg-center flex gap-x-16">
+                <div class=" w-32 h-32" style="height:400px; width: 800px; background-image: url('/img/event-birthday.jpg')">
+                
+                  
             
-        <button class="btn btn-secondary">secondary</button> 
+                </div>
+                <div>
+                  <h1 class="text-primary text-3xl font-popins ">
+                    Birthyday Parties
+                  </h1>
+                
+                    <p class="text-white font-bold ">$290</p>
+                  <hr class="border-2 border-solid  border-primary w-20">
+
+                  <p class="text-white mt-5 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                    Explicabo at, sed animi, placeat vel illum, cumque tenetur soluta totam dolorum odio.</p>
+
+                    <p class="text-white mt-5 font-serif"> We Arrange diferent birthday party in our hall</p>
+
+                    <p class="text-white mt-5 font-serif"> We Arrange diferent random party in our hall</p>
+                    <p class="text-white mt-5 font-serif"> We Arrange diferent random party in our hall</p>
+                    <p class="text-white mt-5 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                      Explicabo at, sed animi, placeat vel illum, cumque tenetur soluta totam dolorum odio.</p>
+
+                   
+                  
+                </div>
+            
+                
+              </div>
+        
+            
+           
+            <!-- <label for="carousel-3"
+              class="control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto flex justify-center content-center"><i
+                class="fas fa-angle-left mt-3"></i></label>
+            <label for="carousel-2"
+              class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"><i
+                class="fas fa-angle-right mt-3"></i></label> -->
+        
+            <!--Slide 2-->
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0 bg-center flex gap-x-16">
+              <div class="" style="height:400px; width: 800px; background-image: url('/img/event-private.jpg')">
+          
+              </div>
+              <div>
+                <h1 class="text-primary text-3xl font-popins ">
+                  Private Parties
+                </h1>
+              
+                  <p class="text-white font-bold ">$290</p>
+                <hr class="border-2 border-solid  border-primary w-20">
+
+                <p class="text-white mt-5 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                  Explicabo at, sed animi, placeat vel illum, cumque tenetur soluta totam dolorum odio.</p>
+
+                  <p class="text-white mt-5 font-serif"> We Arrange diferent birthday party in our hall</p>
+
+                  <p class="text-white mt-5 font-serif"> We Arrange diferent random party in our hall</p>
+                  <p class="text-white mt-5 font-serif"> We Arrange diferent random party in our hall</p>
+                  <p class="text-white mt-5 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                    Explicabo at, sed animi, placeat vel illum, cumque tenetur soluta totam dolorum odio.</p>
+                
+              </div>
+            </div>
+            <!-- <label for="carousel-1"
+              class=" control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto"><i
+                class="fas fa-angle-left mt-3"></i></label>
+            <label for="carousel-3"
+              class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"><i
+                class="fas fa-angle-right mt-3"></i></label> -->
+        
+            <!--Slide 3-->
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0 bg-center flex gap-x-16">
+              <div class="" style="height:400px; width: 800px; background-image: url('/img/event-custom.jpg')">
+          
+              </div>
+              <div>
+                <h1 class="text-primary text-3xl font-popins ">
+                  Custome Parties
+                </h1>
+              
+                  <p class="text-white font-bold ">$290</p>
+                <hr class="border-2 border-solid  border-primary w-20">
+
+                <p class="text-white mt-5 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                  Explicabo at, sed animi, placeat vel illum, cumque tenetur soluta totam dolorum odio.</p>
+
+                  <p class="text-white mt-5 font-serif"> We Arrange diferent birthday party in our hall</p>
+
+                  <p class="text-white mt-5 font-serif"> We Arrange diferent random party in our hall</p>
+                  <p class="text-white mt-5 font-serif"> We Arrange diferent random party in our hall</p>
+                  <p class="text-white mt-5 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                    Explicabo at, sed animi, placeat vel illum, cumque tenetur soluta totam dolorum odio.</p>
+                
+              </div>
+            </div>
+            <!-- <label for="carousel-2"
+              class="control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto"><i
+                class="fas fa-angle-left mt-3"></i></label>
+            <label for="carousel-1"
+              class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto"><i
+                class="fas fa-angle-right mt-3"></i></label> -->
+        
+            <!-- Add additional indicators for each slide -->
+           
+        
           </div>
+          <!-- <div class="mt-[30px]">
+            <ol class="carousel-indicators">
+              <li class="inline-block mr-3">
+                <label for="carousel-1"
+                  class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-primary">•</label>
+              </li>
+              <li class="inline-block mr-3">
+                <label for="carousel-2"
+                  class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-primary">•</label>
+              </li>
+              <li class="inline-block mr-3">
+                <label for="carousel-3"
+                  class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-primary">•</label>
+              </li>
+            </ol> 
+          </div> -->
+       
+     
+      </div>
+      <div class="mt-[40px] relative">
+        <ol class="carousel-indicators">
+          <li class="inline-block mr-3">
+            <label for="carousel-1"
+              class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-primary">•</label>
+          </li>
+          <li class="inline-block mr-3">
+            <label for="carousel-2"
+              class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-primary">•</label>
+          </li>
+          <li class="inline-block mr-3">
+            <label for="carousel-3"
+              class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-primary">•</label>
+          </li>
+        </ol> 
+      </div>
+
+ 
+      
          </div>
+        
 
         </div>
 
       </div>
+
+      <!--random-->
+      <div class="py-24 bg-[#1a1814] mt-32 md:mt-0">
+        <div class="container mx-auto">
+          <div class="flex">
+            <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary uppercase">Reservation</h5>
+            <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+          </div>
+          <h3 class="font-sans font-bold text-primary text-4xl mb-8">Book A Table</h3>
+        <form action="#">
+          <div class="md:grid grid-cols-3 gap-x-8 mx-auto flex p-2">
+            <input type="text" class="w-3/4 md:w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+            <input type="text" class="w-3/4 md:w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+            <input type="text" class="w-3/4 md:w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+          </div>
+
+          <div class="md:grid grid-cols-3 gap-x-8 mt-8">
+            <input type="text" class=" w-3/4 md:w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+            <input type="text" class="w-3/4 md:w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+            <input type="text" class="w-3/4 md:w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+          </div>
+          <div class="mt-8">
+         <textarea name="msg" id="#" cols="30" rows="10" class="w-full border border-[#625b4b]  focus:outline-none bg-[#1a1814] p-2 text-white"placeholder="Your Message"></textarea>
+          </div>
+          <div class="flex justify-items-center items-center ">
+            <button class="btn  border border-primary rounded-full w-48 py-2 bg-black  bg-opacity-10 text-white hover:bg-primary  transition mx-auto">Book A Table</button> 
+          </div>
+          
+        </form>
+
+          
+
+        </div>
+
+      </div>
+
+
+
+      <!--carousel-->
+      <div class="py-32 bg-[#0c0b09]">
+        <div class="container mx-auto">
+          <div class="flex">
+            <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary uppercase">TESTIMONIALS</h5>
+            <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+          </div>
+          <h3 class="font-sans font-bold text-primary text-4xl mb-8">What they're saying about us</h3>
+          <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background:#0c0b09;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #0c0b09;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        /* justify-content: center; */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      /* .swiper-slide img {
+        display: block;
+        width: 20px;
+        height: 20px;
+        
+        
+      } */
+    </style>
+        <!-- Swiper -->
+        <div class="swiper mySwiper ">
+          <div class="swiper-wrapper container gap-x-4">
+            <div class="swiper-slide">
+              <div class=" bg-[#0c0b09] pb-32 relative">
+                <div class="w-80 bg-[#26231d] p-2 py-24 ">
+                  <div class="flex">
+                 
+                    <p class="text-white font-popins">   <i class="fas fa-quote-left text-primary mr-2"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Fugit facere neque ducimus amet quae <br> sed nostrum, accusamus ipsa adipisci assumenda<i class="fas fa-quote-right text-primary ml-2"></i> </p>
+                    
+                  </div>
+                
+                </div>
+                <div class=" absolute left-2  mt-[-30px]">
+                  <img src="./img/testimonials-1.jpg" class="rounded-full border-4 border-gray-400 w-20 h-20 ml-3" alt="">
+                  <p class="text-white mt-2">Saoul Goudman</p>
+                  <small class="text-gray-400 font-bold">Ceo $ Founder</small>
+                </div>
+              
+              </div>
+            </div>
+           
+
+            <!--two-->
+            <div class="swiper-slide">
+              <div class=" bg-[#0c0b09] pb-32 relative">
+                <div class=" w-80 bg-[#26231d] p-2 py-24 ">
+                  <div class="flex">
+                 
+                    <p class="text-white font-popins">   <i class="fas fa-quote-left text-primary mr-2"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Fugit facere neque ducimus amet quae <br> sed nostrum, accusamus ipsa adipisci assumenda<i class="fas fa-quote-right text-primary ml-2"></i> </p>
+                    
+                  </div>
+                
+                </div>
+                <div class=" absolute left-2  mt-[-30px]">
+                  <img src="./img/testimonials-2.jpg" class="rounded-full border-4 border-gray-400 w-20 h-20 ml-3" alt="">
+                  <p class="text-white mt-2">Saoul Goudman</p>
+                  <small class="text-gray-400 font-bold">Ceo $ Founder</small>
+                </div>
+              
+              </div>
+            </div>
+            <!--three-->
+            <div class="swiper-slide">
+              <div class=" bg-[#0c0b09] pb-32 relative">
+                <div class=" w-80 bg-[#26231d] p-2 py-24 ">
+                  <div class="flex">
+                 
+                    <p class="text-white font-popins">   <i class="fas fa-quote-left text-primary mr-2"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Fugit facere neque ducimus amet quae <br> sed nostrum, accusamus ipsa adipisci assumenda<i class="fas fa-quote-right text-primary ml-2"></i> </p>
+                    
+                  </div>
+                
+                </div>
+                <div class=" absolute left-2  mt-[-30px]">
+                  <img src="./img/testimonials-3.jpg" class="rounded-full border-4 border-gray-400 w-20 h-20 ml-3" alt="">
+                  <p class="text-white mt-2">Saoul Goudman</p>
+                  <small class="text-gray-400 font-bold">Ceo $ Founder</small>
+                </div>
+              
+              </div>
+            </div>
+            <!--four-->
+            <div class="swiper-slide">
+              <div class=" bg-[#0c0b09] pb-32 relative">
+                <div class=" w-80 bg-[#26231d] p-2 py-24 ">
+                  <div class="flex">
+                 
+                    <p class="text-white font-popins">   <i class="fas fa-quote-left text-primary mr-2"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Fugit facere neque ducimus amet quae <br> sed nostrum, accusamus ipsa adipisci assumenda<i class="fas fa-quote-right text-primary ml-2"></i> </p>
+                    
+                  </div>
+                
+                </div>
+                <div class=" absolute left-2  mt-[-30px]">
+                  <img src="./img/testimonials-4.jpg" class="rounded-full border-4 border-gray-400 w-20 h-20 ml-3" alt="">
+                  <p class="text-white mt-2">Saoul Goudman</p>
+                  <small class="text-gray-400 font-bold">Ceo $ Founder</small>
+                </div>
+              
+              </div>
+            </div>
+            <!--five-->
+           <div class="swiper-slide">
+              <div class=" bg-[#0c0b09] pb-32 relative">
+                <div class=" w-80 bg-[#26231d] p-2 py-24 ">
+                  <div class="flex">
+                 
+                    <p class="text-white font-popins">   <i class="fas fa-quote-left text-primary mr-2"></i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Fugit facere neque ducimus amet quae <br> sed nostrum, accusamus ipsa adipisci assumenda<i class="fas fa-quote-right text-primary ml-2"></i> </p>
+                    
+                  </div>
+                
+                </div>
+                <div class=" absolute left-2  mt-[-30px]">
+                  <img src="./img/testimonials-5.jpg" class="rounded-full border-4 border-gray-400 w-20 h-20 ml-3" alt="">
+                  <p class="text-white mt-2">Saoul Goudman</p>
+                  <small class="text-gray-400 font-bold">Ceo $ Founder</small>
+                </div>
+              
+              </div>
+            </div>
+           
+           
+           
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+   </div>
+    </div>
+
+    <!--image frame-->
+    <div class="py-32 bg-[#0c0b09]">
+      <div class="container mx-auto">
+        <div class="flex">
+          <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary uppercase">Gallary</h5>
+          <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+        </div>
+        <h3 class="font-sans font-bold text-primary text-4xl mb-8">Some photos from Our Restaurant</h3>
+      </div>
+
+        <section class="text-gray-700 p-10">
+        
+              <div class="sm:flex flex-wrap m-1 md:-m-2">
+                  <div class="flex flex-wrap sm:w-1/4 ">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                              src="./img/gallery-1.jpg">
+                      </div>
+                  </div>
+                  <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                          src="./img/gallery-2.jpg">
+                      </div>
+                  </div>
+                  <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                          src="./img/gallery-3.jpg">
+                      </div>
+                  </div>
+                  <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                          src="./img/gallery-4.jpg">
+                      </div>
+                  </div>
+                   <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                          src="./img/gallery-5.jpg">
+                      </div>
+                  </div>
+                  <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                          src="./img/gallery-6.jpg">
+                      </div>
+                  </div>
+                  <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out"
+                          src="./img/gallery-7.jpg">
+                      </div>
+                  </div>
+                   <div class="flex flex-wrap sm:w-1/4">
+                      <div class="w-full  border-2 border-[#454035] overflow-hidden">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full  hover:transform hover:scale-110 transition duration-600 ease-in-out "
+                          src="./img/gallery-8.jpg">
+                      </div>
+                  </div>
+              </div>
+             
+        </section>
+    </div>
+
+        <!-- <div class="w-full" >
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.26601777838!2d90.40310325!3d23.798446300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1633864247483!5m2!1sen!2sbd"  style="border:0; width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+        </div> -->
+      <!--chefs-->
+
+      <div class="py-32 bg-[#0c0b09]">
+        <div class="container mx-auto ">
+          <div class="flex">
+            <h5 class="text-gray-400  text-sm font-popins devide devide-x-primary uppercase">Chefs</h5>
+            <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+          </div>
+          <h3 class="font-sans font-bold text-primary text-4xl mb-8">Our Professional Chefs</h3>
+          <div class="grid grid-cols-3 gap-x-8">
+            <div class="group relative overflow-hidden">
+              <img src="./img/chefs-1.jpg" alt="chef1" class="w-full h-full ">
+              <div class="absolute top-0 left-0 right-0 bottom-0 group-hover:bg-black group-hover:opacity-50"></div>
+              <div class="absolute top-full left-0 right-0 bottom-0 mx-auto text-center group-hover:top-3/4 transition-all duration-1000 ease-in-out">
+                <p class="text-white  text-2xl font-thin">Walter White</p>
+                <p class="text-white text-sm">Master Chef</p>
+                <div class="flex justify-center  mt-2 gap-x-4 mb-2">
+                
+                  <i class="fab fa-twitter text-lg  text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-facebook text-lg text-white hover:text-primary  hover:cursor-pointer"></i>
+                  <i class="fab fa-instagram text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-linkedin text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                </div>
+            </div>
+              
+
+            </div>
+
+            <!-- <div class="relative group">
+              <img src="./img/chefs-1.jpg" alt="chef1" class="w-full h-full ">
+              <div class="absolute bottom-0 text-center w-full h-full opacity-0 group-hover:opacity-100 delay-200 duration-300 ease-in-out bg-black bg-opacity-50">
+                <p class="text-white  text-2xl font-thin">Walter White</p>
+                <p class="text-white text-sm">Master Chef</p>
+                <div class="flex justify-center  mt-2 gap-x-4 mb-2">
+                
+                  <i class="fab fa-twitter text-lg  text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-facebook text-lg text-white hover:text-primary  hover:cursor-pointer"></i>
+                  <i class="fab fa-instagram text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-linkedin text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="relative group overflow-hidden">
+              <div class="absolute top-0 bottom-0 left-0 right-0 group-hover:bg-black group-hover:bg-opacity-50 h-full w-full"></div>
+              <img src="./img/chefs-2.jpg" alt="chefs-2" class="w-full h-full ">
+              <div class="absolute right-0 left-0 text-center bottom-full group-hover:bottom-3/4 transition-all duration-1000 ease-in-out 0.4s delay-150 ">
+                
+                <p class="text-white  text-2xl font-thin">Sarah Jhonson</p>
+                <p class="text-white text-sm">Patissier</p>
+                <div class="flex justify-center  mt-2 gap-x-4 mb-2">
+                
+                  <i class="fab fa-twitter text-lg  text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-facebook text-lg text-white hover:text-primary  hover:cursor-pointer"></i>
+                  <i class="fab fa-instagram text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-linkedin text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                </div>
+              
+                
+
+              </div>
+            </div>
+
+            <div class="relative group overflow-hidden">
+              <div class="absolute top-0 bottom-0 left-0 right-0 group-hover:bg-black group-hover:bg-opacity-50 h-full w-full"></div>
+              <img src="./img/chefs-3.jpg" alt="chefs-3" class="w-full h-full ">
+              <div class="absolute text-center left-0 right-full group-hover:right-1/4 group-hover:bottom-2/4 group-hover:top-2/4 transition-all duration-1000 ease-in-out">
+                
+                <p class="text-white  text-2xl font-thin">William Anderson</p>
+                <p class="text-white text-sm">Cook</p>
+                <div class="flex justify-center  mt-2 gap-x-4 mb-2">
+                
+                  <i class="fab fa-twitter text-lg  text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-facebook text-lg text-white hover:text-primary  hover:cursor-pointer"></i>
+                  <i class="fab fa-instagram text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                  <i class="fab fa-linkedin text-lg text-white hover:text-primary hover:cursor-pointer"></i>
+                </div>
+              
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!--contact section start-->
+        <div class="py-32 bg-[#0c0b09]">
+          <div class="container mx-auto ">
+            <div class="flex">
+              <h5 class="text-gray-400 text-sm font-popins devide devide-x-primary uppercase">Contact</h5>
+              <hr class="w-40 text-primary  mt-2 ml-2 opacity-40">
+            </div>
+            <h3 class="font-sans font-bold text-primary text-4xl mb-8">Contact Us</h3>
+          </div>
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.26601777838!2d90.40310325!3d23.798446300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1633945692190!5m2!1sen!2sbd" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+           
+          
+        </div>
+  
+         <!--contact form  section start-->
+         <div class="py-32 bg-[#0c0b09]">
+          <div class="container mx-auto ">
+        
+            <div class="sm:grid grid-cols-3">
+                <div class="ml-10 sm:ml-0">
+                      <div class="flex gap-x-4">
+                        <div class=" text-lg rounded-full h-10 w-10 text-white  bg-primary cursor-pointer flex justify-center items-center">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                          <span>
+                            <h2 class="text-white text-1xl font-serif">Location:</h2>
+                            <small class="text-sm text-gray-400">A108 Adam Street, New York, NY 535022</small>
+                          </span>
+                        </div>
+                        <div class="flex gap-x-4 mt-5">
+                        <span>
+                          <div class=" text-lg rounded-full h-10 w-10 text-white  bg-primary cursor-pointer flex justify-center items-center">
+                            <i class="far fa-clock"></i>
+                          </div>
+                          
+                        </span>
+                            <span>
+                              <h2 class="text-white text-1xl font-serif">Open Hours:</h2>
+                              <small class="text-sm text-gray-400">Monday-Saturday: <br>
+                                11:00 AM - 2300 PM</small>
+                            </span>
+                          </div>
+
+                        <div class="flex gap-x-4 mt-5">
+                          <div class="text-lg rounded-full h-10 w-10 text-white  bg-primary hover:text-primary hover:cursor-pointer flex justify-center items-center">
+                            <i class="far fa-envelope"></i>
+                          </div>
+                      
+                            <span>
+                              <h2 class="text-white text-1xl font-serif">Email</h2>
+                              <small class="text-sm text-gray-400">info@example.com</small>
+                            </span>
+                          </div>
+
+                          <div class="flex gap-x-4 mt-5">
+                            <div class="text-lg rounded-full h-10 w-10 text-white  bg-primary hover:text-primary hover:cursor-pointer flex justify-center items-center">
+                              <i class="fas fa-mobile-alt"></i>
+                            </div>
+                      
+                            <!-- <i class="fas fa-mobile-alt  text-lg rounded-full h-8 w-8 text-white p-2 bg-primary hover:text-primary hover:cursor-pointer pl-2"></i> -->
+                              <span>
+                                <h2 class="text-white text-1xl font-serif">Call:</h2>
+                                <small class="text-sm text-gray-400">+1 5589 55488 55s</small>
+                              </span>
+                            </div>
+                      </div>
+
+                      <div class="col-span-2">
+                        <form action="#" class="border border-gray-400 m-5 sm:border-none sm:m-0">
+                          <div class="grid grid-cols-2 gap-x-8 m-2 sm:m-0">
+                            <input type="text" class="w-full border border-[#726955] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Your Name">
+                            <input type="text" class="w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white " placeholder= "Your Email">
+                            
+                          </div>
+                
+                          <div class="grid grid-cols-1 gap-x-8 mt-8 m-2 sm:m-0 sm:mt-8">
+                          
+                            <input type="text" class="w-full border border-[#625b4b] focus:outline-none bg-[#1a1814] p-2 text-white" placeholder= "Subject">
+                           
+                          </div>
+                          <div class="mt-8 m-2 sm:m-0 sm:mt-8">
+                         <textarea name="msg" id="#" cols="30" rows="10" class="w-full border border-[#625b4b]  focus:outline-none bg-[#1a1814] p-2 text-white"placeholder="Message"></textarea>
+                          </div>
+                          <div class="flex justify-items-center items-center ">
+                            <button class="btn  border border-primary rounded-full w-48 py-2 bg-primary  text-white  mx-auto mt-5 mb-5 sm:mb-0">Sent Message</button> 
+                          </div>
+                          
+                        </form>
+                      </div>
+                     
+                  </div>
+                </div>                          
+        </div>
+
+        <hr class="text-primary opacity-40 w-full">
+
+        <div class="py-12 bg-[#0c0b09]">
+          <div class="container mx-auto ">
+
+            <div class="sm:grid grid-cols-5 gap-x-8">
+              <div class="h-full">
+                <h3 class="text-white text-2xl font-serif">RESTAURANTLY</h3>
+                <p class="text-gray-100 text-sm font-popins mt-3">A108 Adam Street <br>
+                  NY 535022, USA</p>
+                  <p class="mt-4 text-gray-100 text-sm font-popins">
+                    Phone: +1 5589 55488 55 <br>
+                    Email: info@example.com
+                  </p>
+                  <div class="flex justify-start gap-x-4 mt-4">
+                
+                    <i class="fab fa-twitter text-lg rounded-full h-8 w-8 text-white bg-gray-500 p-2 hover:text-primary hover:cursor-pointer"></i>
+                    <i class="fab fa-facebook text-lg rounded-full h-8 w-8 text-white bg-gray-500 p-2 hover:text-primary  hover:cursor-pointer"></i>
+                    <i class="fab fa-instagram text-lg rounded-full h-8 w-8 text-white bg-gray-500 p-2 hover:text-primary hover:cursor-pointer"></i>
+                    <i class="fab fa-skype text-lg rounded-full h-8 w-8 text-white bg-gray-500 p-2 hover:text-primary hover:cursor-pointer"></i>
+                    <i class="fab fa-linkedin text-lg rounded-full h-8 w-8 text-white bg-gray-500 p-2 hover:text-primary hover:cursor-pointer"></i>
+                  </div>
+              </div>
+
+              
+              <!-- Usefull Links -->
+              <div>
+               
+                <ul class="text-white text-xl font-serif"> Usefull Links
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Home</span>
+                     </div>
+                  </li>
+
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">About Us</span>
+                     </div>
+                  </li>
+
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Service</span>
+                     </div>
+                  </li>
+
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Terms Of Service</span>
+                     </div>
+                  </li>
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Privacy Policy</span>
+                     </div>
+                  </li>
+                </ul>
+              
+              </div>
+
+
+              <!--  Our Services-->
+              <div>
+              
+                <ul class="text-white text-xl font-serif"> Our Services
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Web Design</span>
+                     </div>
+                  </li>
+
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Web Development</span>
+                     </div>
+                  </li>
+
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Product Management</span>
+                     </div>
+                  </li>
+
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Marketing</span>
+                     </div>
+                  </li>
+                  <li class="mt-5">
+                    <div class="flex gap-x-4">
+                      <i class="fas fa-chevron-right text-primary text-sm mt-1"></i>
+                      <span class="text-white text-sm cursor-pointer hover:text-primary">Graphics Designing</span>
+                     </div>
+                  </li>
+                </ul>
+               <!-- <div class="flex">
+                <i class="fas fa-chevron-right"></i>
+                <span class="text-white text-sm cursor-pointer hover:text-primary">Home</span>
+               </div> -->
+              </div>
+
+              <!-- Subscribe section -->
+              <div class="col-span-2 ">
+                <h3 class="text-xl text-white">Our Newsletter</h3>
+                <p class="font-mono text-white mt-3">Tamen quem nulla quae legam multos aute sint culpa legam <br> noster magna</p>
+                <div class="mt-5 relative flex w-3/4">
+                  <input type="text" class="w-full p-3 bg-primary bg-opacity-10 rounded-full outline-none border border-[#625b4b]">]
+                  <button class="absolute right-0 btn border border-primary rounded-full text-white bg-primary hover:bg-primary hover:bg-opacity-90">Subscribe</button>
+                </div>
+              </div>
+              
+
+
+            </div>
+          </div>
+        </div>
+        <hr class="text-primary opacity-40 w-full">
+
+        <!-- Footer Section -->
+        <!-- <div class="py-16 bg-black">
+
+        </div> -->
+        <footer class="p-8 footer bg-base-300 text-base-content footer-center">
+          <div class="flex justify-between">
+            <div>
+              <p>Copyright © 2021 - All right reserved by ACME Industries Ltd</p>
+            </div>
+            <div class="text-right ml-36">
+              kjdjghaulwi
+            </div>
+          </div>
+       
+          
+        </footer>
+
+      
       
 
 
@@ -456,5 +1422,33 @@
       </header> -->
 
     <script src="./src/js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
