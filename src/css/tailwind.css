@@ -15,4 +15,7 @@
 body{
 	@apply font-popins
 }
+.scroll-snap-y {
+    scroll-snap-type: y;
+  }
 
